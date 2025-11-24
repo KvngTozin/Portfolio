@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akindele Oloruntosin - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* --- Fluid Animations --- */
+body {
+    scroll-behavior: smooth;
+}
+
+.fade-in, .reveal-card, .reveal-text, .reveal-skill, .reveal-icon {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger project cards */
+.projects-grid .project-card:nth-child(1) { transition-delay: 0.2s; }
+.projects-grid .project-card:nth-child(2) { transition-delay: 0.4s; }
+.projects-grid .project-card:nth-child(3) { transition-delay: 0.6s; }
+.projects-grid .project-card:nth-child(4) { transition-delay: 0.8s; }
+.projects-grid .project-card:nth-child(5) { transition-delay: 1s; }
+.projects-grid .project-card:nth-child(6) { transition-delay: 1.2s; }
+
+/* Smooth hover effect for buttons */
+.btn {
+    transition: transform 0.3s, background-color 0.3s;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #444;
+    color: #fff;
+}
+
+/* EXTRA SPACING BETWEEN WRITE-UPS */
+.project-card p,
+.project-card .tools {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* SUBTITLES (Business Value, Tools, Insight) SHOULD REMAIN WHITE */
+.project-card strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* PROJECT TITLES — BRIGHT BLUE */
+.project-card h3 {
+    color: #89CFF0 !important;
+    font-weight: 700;
+}
+
+/* SECTION TITLES — BRIGHT BLUE */
+.section-title {
+    color: #007BFF !important;
+    margin-bottom: 1.5rem;
+}
+
+/* Skill & Certification small headings remain white (softer hierarchy) */
+.skill-category h3,
+.cert-info h3 {
+    color: #007BFF;
+    font-weight: 600;
+}
+
+/* --- Consistent Section Spacing --- */
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Optional: tighter spacing for subheadings */
+.category-title {
+    margin-bottom: 1rem;
+}
+
+/* Optional: reduce space inside About content */
+#about .about-content p {
+    margin-bottom: 1rem;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <a href="#hero" class="logo">Akindele Oloruntosin</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="section">
+        <div class="hero-content container fade-in">
+            <h1>Hi, I'm Akindele Tosin</h1>
+            <p class="role">Data Analyst • Cybersecurity Analyst • Machine Learning Engineer • Data Entry Clerk</p>
+            <p class="tagline">Transforming raw data into <strong>clear insights</strong>, <strong>predictive intelligence</strong>, and <strong>business-level solutions</strong></p>
+            <a href="#contact" class="btn primary-btn">Get In Touch</a>
+        </div>
+        <div style="flex:1; min-width:200px; display:flex; justify-content:center;" class="fade-in">
+    <img src="images/tosin1.jpg" alt="Akindele Tosin" class="hero-img">
+</div>
+
+    </header>
+
+    <!-- About -->
+    <section id="about" class="section container reveal-text">
+    <h2 class="section-title">About Me 👋</h2>
+    <div class="about-content">
+        <p>
+            I am a detail-oriented professional with experience in 
+            <span class="highlight">data analysis</span>, <span class="highlight">machine learning</span>, 
+            and <span class="highlight">ethical hacking</span>. I turn complex data into clear insights 
+            that help organizations make smarter decisions.
+        </p>
+        <p>
+            Skilled in <span class="highlight">SQL</span>, <span class="highlight">Excel</span>, 
+            <span class="highlight">Tableau</span>, and <span class="highlight">R</span>, I focus on 
+            uncovering patterns, optimizing workflows, and delivering actionable solutions.
+        </p>
+        <p>
+            My goal is to grow into a full-time role as a 
+            <span class="highlight">Data Analyst, Ethical Hacker </span> or <span class="highlight">Machine Learning Engineer</span>, 
+            contributing to projects that make a real impact.
+        </p>
+    </div>
+</section>
+
+
+    <!-- Projects -->
+<section id="projects" class="section container">
+    <h2 class="section-title reveal-text">My Projects 📈</h2>
+
+    <div class="projects-grid">
+        <!-- Supply Chain -->
+        <div class="project-card reveal-card">
+            <h3>DataCo Supply Chain Analysis</h3>
+            <p class="description">End-to-end analysis of supply chain delivery performance using BI and ML. Patterns behind late deliveries, KPIs visualized via Tableau, Random Forest identifies factors influencing delays.</p>
+            <p><strong>Business Value:</strong> Enables anticipation of late deliveries, optimizes shipping, improves logistics planning, and decision-making.</p>
+            <div class="tools"><strong>Tools:</strong> SQL, Excel, Tableau, R (Random Forest)</div>
+            <a href="https://github.com/KvngTozin/DataCo-Supply-Chain-Analysis.git" class="btn secondary-btn" target="_blank">View Project</a>
+        </div>
+
+        <!-- Car Sales -->
+        <div class="project-card reveal-card">
+            <h3>Car Sales Performance Analysis</h3>
+            <p class="description">Full exploratory analysis of car sales data to uncover high-value customers, top-selling categories, regional trends, and revenue performance.</p>
+            <p><strong>Business Value:</strong> Identifies top customers, profitable products, peak sales regions, and seasonal patterns.</p>
+            <div class="tools"><strong>Tools:</strong> Excel, SQL, Tableau</div>
+            <a href="https://github.com/KvngTozin/Car-sales-analysis.git" class="btn secondary-btn" target="_blank">View Project</a>
+        </div>
+
+        <!-- Bike Sales -->
+        <div class="project-card reveal-card">
+            <h3>Bike Sales Dashboard & Market Insight</h3>
+            <p class="description">Interactive dashboard analyzing customer demographics, purchasing behavior, and product preferences.</p>
+            <p><strong>Business Value:</strong> Reveals profitable segments, top-selling models, high-performing regions, and monthly averages.</p>
+            <div class="tools"><strong>Tools:</strong> SQL, Excel, Tableau</div>
+            <a href="https://github.com/KvngTozin/Bike-Sales-analysis.git" class="btn secondary-btn" target="_blank">View Dashboard</a>
+        </div>
+
+        <!-- COVID Analysis -->
+        <div class="project-card reveal-card">
+            <h3>COVID-19 Global Trend Analysis</h3>
+            <p class="description">Statistical and visual analysis tracking infection rates, death trends, recovery patterns, and continental spread over time.</p>
+            <p><strong>Insight:</strong> Helps governments understand peak infection periods, regional risk, and effectiveness of interventions.</p>
+            <div class="tools"><strong>Tools:</strong> Excel, SQL, Tableau</div>
+            <a href="https://github.com/KvngTozin/Covid-Analysis.git" class="btn secondary-btn" target="_blank">View Project</a>
+        </div>
+
+        <!-- US Stock Market Prediction -->
+        <div class="project-card reveal-card">
+            <h3>US Stock Market Price Prediction</h3>
+            <p class="description">ML model using historical stock data to forecast short-term price movements with feature engineering, moving averages, trend indicators.</p>
+            <p><strong>Insight:</strong> Helps traders understand market trends, identify entry/exit points, and assess volatility.</p>
+            <div class="tools"><strong>Tools:</strong> R, XGBoost, APIs (Alpha Vantage & NewsAPI)</div>
+            <a href="https://github.com/KvngTozin/US-stock-market-Prediction.git" class="btn secondary-btn" target="_blank">View Project</a>
+        </div>
+
+        <!-- Heart Attack Prediction -->
+        <div class="project-card reveal-card">
+            <h3>Heart Attack Risk Prediction Model</h3>
+            <p class="description">Supervised ML model predicts heart attack risk based on patient metrics like cholesterol, blood pressure, smoking, and BMI.</p>
+            <p><strong>Insight:</strong> Identifies high-risk individuals for proactive lifestyle changes or medical intervention.</p>
+            <div class="tools"><strong>Tools:</strong> R, R Shiny, Logistic Regression, Random Forest</div>
+            <a href="https://github.com/KvngTozin/Heart-attack-prediction.git" class="btn secondary-btn" target="_blank">View Project</a>
+        </div>
+    </div>
+</section>
+
+
+        
+      <!-- Visualizations / Dashboards Section -->
+<section id="visualizations" class="py-20 reveal">
+    <div class="container mx-auto px-6">
+        <h2 class="section-title reveal-text" style="color:#007BFF; text-align:center; margin-bottom:2rem;">
+            My Designs & Dashboards
+        </h2>
+        <div class="projects-grid" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+
+            <!-- Dashboard 1 -->
+            <div class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden reveal" style="flex:1 1 350px; max-width:400px;">
+                <a href="images/bike sales 1.png" target="_blank">
+                    <img src="images/bike sales 1.png" alt="Bike Sales Analysis" style="width:100%; height:auto; display:block;"/>
+                </a>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-white">Bike Sales Analysis</h3>
+                </div>
+            </div>
+
+            <!-- Dashboard 2 -->
+            <div class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden reveal" style="flex:1 1 350px; max-width:400px;">
+                <a href="images/dataco1.png" target="_blank">
+                    <img src="images/dataco1.png" alt="DataCo Supply Analysis" style="width:100%; height:auto; display:block;"/>
+                </a>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-white">DataCo Supply Analysis</h3>
+                </div>
+            </div>
+
+            <!-- Dashboard 3 -->
+            <div class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden reveal" style="flex:1 1 350px; max-width:400px;">
+                <a href="images/stock 6.png" target="_blank">
+                    <img src="images/stock 6.png" alt="Stock Market Prediction" style="width:100%; height:auto; display:block;"/>
+                </a>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-white">Stock Market Prediction</h3>
+                </div>
+            </div>
+
+            <!-- Dashboard 4 -->
+            <div class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden reveal" style="flex:1 1 350px; max-width:400px;">
+                <a href="images/heart1.png" target="_blank">
+                    <img src="images/heart1.png" alt="Heart Attack Prediction" style="width:100%; height:auto; display:block;"/>
+                </a>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-white">Heart Attack Prediction</h3>
+                </div>
+            </div>
+
+            <!-- Dashboard 5 -->
+            <div class="project-card bg-slate-900 rounded-lg shadow-lg overflow-hidden reveal" style="flex:1 1 350px; max-width:400px;">
+                <a href="images/car sales 1.png" target="_blank">
+                    <img src="images/car sales 1.png" alt="Car Sales Dashboard" style="width:100%; height:auto; display:block;"/>
+                </a>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-white">Car Sales Dashboard</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+        <h2 class="section-title reveal-text">Skills & Tools 🛠️</h2>
+        <div class="skills-container">
+            <div class="skill-category reveal-skill">
+                <h3><i class="fas fa-code"></i> Programming</h3>
+                <div class="skill-list">
+                    <span>R Programming</span>
+                    <span>SQL</span>
+                    <span>Python Programming</span>
+                </div>
+            </div>
+
+            <div class="skill-category reveal-skill">
+                <h3><i class="fas fa-tools"></i> Tools</h3>
+                <div class="skill-list">
+                    <span>Excel (Advanced)</span>
+                    <span>Tableau</span>
+                    <span>SQL (MySQL Server & SSMS)</span>
+                    <span>R</span>
+                </div>
+            </div>
+
+            <div class="skill-category reveal-skill">
+                <h3><i class="fas fa-lightbulb"></i> Concepts</h3>
+                <div class="skill-list">
+                    <span>Machine Learning (XGBoost, Random Forest, Naive Bayes)</span>
+                    <span>Predictive Analytics</span>
+                    <span>Cyber Security</span>
+                    <span>Data Cleaning & Transformation</span>
+                    <span>Statistical Modelling</span>
+                    <span>Business Intelligence</span>
+                    <span>Data Visualization</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section container">
+        <h2 class="section-title reveal-text">Certifications 🎓</h2>
+        <div class="certifications-container reveal-text">
+            <div class="cert-card">
+                <img src="images/EC council certificate.png" alt="CEH Certification" class="cert-image">
+                <div class="cert-info">
+                    <h3>Certified Ethical Hacker (CEH)</h3>
+                    <p>Validates skills in ethical hacking, penetration testing, and securing systems against cyber threats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+        <h2 class="section-title reveal-text">Get In Touch 📧</h2>
+        <p class="contact-tagline reveal-text">I'm open to full-time Data Analyst, ML Engineering, and Cybersecurity roles. Let’s connect!</p>
+        <div class="contact-links">
+            <a href="mailto:tosinakindele47@gmail.com" class="contact-icon-link reveal-icon">
+                <i class="fas fa-envelope"></i><span>Email</span>
+            </a>
+            <a href="https://github.com/KvngTozin" class="contact-icon-link reveal-icon">
+                <i class="fab fa-github"></i><span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/tosin-akindele-5985102a8/" class="contact-icon-link reveal-icon">
+                <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Akindele Oloruntosin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- JS for fluid scroll-triggered animations ---
+        const faders = document.querySelectorAll('.fade-in, .reveal-card, .reveal-text, .reveal-skill, .reveal-icon');
+        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if(!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+    </script>
+</body>
+</html>
